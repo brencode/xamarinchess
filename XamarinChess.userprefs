@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{0BE3356C-B5FF-4DEA-B9A0-AD23EBC1433B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinChess/Views/ChessBoardView.xaml.cs">
+    <Files>
+      <File FileName="XamarinChess/Views/ChessBoardView.xaml.cs" Line="27" Column="31" />
+      <File FileName="XamarinChess/Views/MainPage.xaml" Line="86" Column="1" />
+      <File FileName="XamarinChess/ChessBoardTemplate.xaml" Line="6" Column="1" />
+      <File FileName="XamarinChess/ChessBoardTemplate.xaml.cs" Line="7" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.XamarinChess HideGettingStarted="True" />
+  <MonoDevelop.Ide.ItemProperties.XamarinChess.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.26F16462-4457-4264-A2CE-7D3EAE0CA090">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.XamarinChess.iOS>
+</Properties>

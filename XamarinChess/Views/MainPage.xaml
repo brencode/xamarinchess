@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:XamarinChess" 
+    xmlns:converters="clr-namespace:XamarinChess.Converters"
+    xmlns:controls="clr-namespace:XamarinChess.Controls"
+    x:Class="XamarinChess.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BoardToTileConverter x:Key="BoardToTileConverter"></converters:BoardToTileConverter>
+            <converters:PieceToImageConverter x:Key="PieceToImageConverter"></converters:PieceToImageConverter>
+            <converters:BackgroundColorConverter x:Key="BackgroundColorConverter"></converters:BackgroundColorConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <controls:ChessBoardView HorizontalOptions="FillAndExpand"
+                        Grid.Row="1"
+                        VerticalOptions="FillAndExpand"
+                        RowSpacing="20"
+                        ColumnSpacing="20"
+                        MaxColumns="2"
+                        ItemsSource="{Binding ListOfData}"
+                        CommandParameter="{Binding}"
+                        Command="{Binding ClickCommand}"
+                        IsClippedToBounds="False">
+            <controls:GridView.TileHeight>
+              <OnPlatform x:TypeArguments="x:Single"
+                          iOS="60"
+                          Android="60"
+                          WinPhone="90" />
+            </controls:GridView.TileHeight>
+        </controls:ChessBoardView>
+    
+<!--    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        
+        <control:GridView HorizontalOptions="FillAndExpand"
+                        Grid.Row="1"
+                        VerticalOptions="FillAndExpand"
+                        RowSpacing="20"
+                        ColumnSpacing="20"
+                        MaxColumns="2"
+                        ItemsSource="{Binding ListOfData}"
+                        CommandParameter="{Binding}"
+                        Command="{Binding ClickCommand}"
+                        IsClippedToBounds="False">
+            <control:GridView.TileHeight>
+              <OnPlatform x:TypeArguments="x:Single"
+                          iOS="60"
+                          Android="60"
+                          WinPhone="90" />
+            </control:GridView.TileHeight>
+        </control:GridView>-->
+
+<!--        <Image Grid.Column="0" Grid.Row="0" BackgroundColor="{Binding IsHighlighted, Converter={StaticResource BackgroundColorConverter}, ConverterParameter=FFFFFF}" Source="{Binding Piece, Converter={StaticResource PieceToImageConverter}" BindingContext="{Binding Board, Converter={StaticResource BoardToTileConverter}, ConverterParameter=0.0}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TileTapped}"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image Grid.Column="0" Grid.Row="1" BackgroundColor="{Binding IsHighlighted, Converter={StaticResource BackgroundColorConverter}, ConverterParameter=FF0000}" Source="{Binding Piece, Converter={StaticResource PieceToImageConverter}" BindingContext="{Binding Board, Converter={StaticResource BoardToTileConverter}, ConverterParameter=0.1}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TileTapped}"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image Grid.Column="1" Grid.Row="0" BackgroundColor="{Binding IsHighlighted, Converter={StaticResource BackgroundColorConverter}, ConverterParameter=FF0000}" Source="{Binding Piece, Converter={StaticResource PieceToImageConverter}" BindingContext="{Binding Board, Converter={StaticResource BoardToTileConverter}, ConverterParameter=1.0}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TileTapped}"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image Grid.Column="1" Grid.Row="1" BackgroundColor="{Binding IsHighlighted, Converter={StaticResource BackgroundColorConverter}, ConverterParameter=FFFFFF}" Source="{Binding Piece, Converter={StaticResource PieceToImageConverter}" BindingContext="{Binding Board, Converter={StaticResource BoardToTileConverter}, ConverterParameter=1.1}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TileTapped}"/>
+            </Image.GestureRecognizers>
+        </Image>-->
+<!--    </Grid>-->
+</ContentPage>
